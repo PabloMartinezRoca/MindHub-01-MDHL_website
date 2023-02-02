@@ -268,38 +268,6 @@ nav.main.hide {
 	}
 }
 
-/* Nav Styles Selector ================================================================= */
-nav.styles-selector {
-	position: absolute;
-	right: 20px;
-}
-
-nav.styles-selector span {
-  display: inline-block;
-	padding: 0 0.5em;
-}
-
-nav.styles-selector span a,
-nav.styles-selector span a:visited {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-size: 1.2em;
-	color: #fff;
-	text-decoration: none;
-}
-
-nav.styles-selector span a:hover {
-	text-decoration: underline;
-}
-
-nav.styles-selector .nav-item-selected a {
-	color: #ffcc33;
-}
-
-nav.styles-selector .nav-item-selected a:hover {
-	text-decoration:none;
-	cursor: default;
-}
-
 /* Main ================================================================= */
 main {
 	width: 100%;
@@ -411,6 +379,11 @@ main.bg-upcoming-events {
 
 .general-information p.info-general-information {
 	background-image: url("../images/icon-general-information.png");
+}
+
+/* game Info ============================================================= */
+.game-info-table {
+	border: none;
 }
 
 /* Contact us ============================================================= */
