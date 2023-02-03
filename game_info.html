@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<header class="bg-header-contact">
+	<header class="bg-header-game-info">
 		<h1>MIGHTY DUCKS HOCKEY LEAGUE</h1>
 		<div class="baseline-header">
 			<h2>GAME INFO</h2>
@@ -22,7 +22,9 @@
 	<nav id="mainNav" class="main">
 		<span class="nav-link"><a href="index.html?style=0">HOME</a></span>
 		<span class="nav-link"><a href="about.html?style=0">ABOUT MDHL</a></span>
-		<span class="nav-link no-link">CONTACT</span>
+		<span class="nav-link no-link">GAME INFO</span>
+		<span class="nav-link"><a href="rules.html">RULES &amp; POLICIES</a></span>
+		<span class="nav-link"><a href="contact.html">CONTACT</a></span>
 	</nav>
 	<aside id="website-logo" class="website-logo">
 		<figure>
@@ -31,20 +33,20 @@
 	</aside>
 	<main class="bg-game-info">
 		<section class="game-info">
-			<h3 class="section-headline">FALL SCHEDULE</h3>
-			<p>* All games take place on Saturday.</p>
-			<table class="game-info-table">
+			<h3 class="section-headline center">FALL SCHEDULE</h3>
+			<table class="game-info-table left">
+				<caption>* All games take place on Saturday.</caption>
 				<thead>
 					<tr>
-						<th>SEPTEMBER</th>
-						<th>Teams</th>
-						<th>Location</th>
-						<th>Times</th>
+						<th scope="col" class="center">SEPTEMBER</th>
+						<th scope="col">Teams</th>
+						<th scope="col">Location</th>
+						<th scope="col">Times</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2">9/01</td>
+						<th rowspan="2" class="center">9/01</th>
 						<td>U1 and U4</td>
 						<td>AJ Katzenmaier</td>
 						<td>9:30 a.m.</td>
@@ -55,7 +57,7 @@
 						<td>1:00 p.m.</td>
 					</tr>
 					<tr>
-						<td rowspan="2">9/08</td>
+						<th rowspan="2" class="center">9/08</th>
 						<td>U5 and U6</td>
 						<td>Howard A Yeager</td>
 						<td>9:30 a.m.</td>
@@ -66,7 +68,7 @@
 						<td>1:00 p.m.</td>
 					</tr>
 					<tr>
-						<td rowspan="2">9/15</td>
+						<th rowspan="2" class="center">9/15</th>
 						<td>U2 and U4</td>
 						<td>North</td>
 						<td>9:30 a.m.</td>
@@ -77,7 +79,7 @@
 						<td>1:00 p.m.</td>
 					</tr>
 					<tr>
-						<td rowspan="2">9/22</td>
+						<th rowspan="2" class="center">9/22</th>
 						<td>U1 and U3</td>
 						<td>South</td>
 						<td>9:30 a.m.</td>
@@ -88,27 +90,32 @@
 						<td>1:00 p.m.</td>
 					</tr>
 					<tr>
-						<td>9/29</td>
+						<th class="center">9/29</th>
 						<td>U4 and U5</td>
 						<td>Greenbay</td>
 						<td>9:30 a.m.</td>
 					</tr>
 				</tbody>
 			</table>
-	
-			<p>Facility Type: Outdoor</p>
-			<p>Additional lnformation: I deemed necessary by MDHL games may be shortened or cancelled due to extreme weather
-				conditions.</p>
-			<p>Please direct all questions to: Michael Randall, League Coordinator</p>
-			<p>Phone:(630) 690-8132</p>
-			<p>Email:michael.randall@cchihockey.org</p>
-	
+
+			<article class="game-info-general-information flex-container flex-dir-col flex-jc-space-between">
+				<p><span class="p-heading">Facility Type: </span>Outdoor</p>
+				<p><span class="p-heading">Additional lnformation: </span> I deemed necessary by MDHL games may be shortened or
+					cancelled due to extreme weather
+					conditions.</p>
+				<p><span class="p-heading">Please direct all questions to:</span> Michael Randall, League Coordinator</p>
+				<div class="flex-container flex-jc-space-between">
+					<p><span class="p-heading">Phone:</span> (630) 690-8132</p>
+					<p><span class="p-heading">Email:</span> michael.randall@cchihockey.org</p>
+				</div>
+			</article>
+
 		</section>
 	</main>
-	<footer>
+	<footer class="center">
 		<p>&copy; 2023 - MDHL All rights reserved.</p>
 	</footer>
-	
+
 	<script>
 		/* Logo and Nav objects Visual control */
 		var isVisible = false;
