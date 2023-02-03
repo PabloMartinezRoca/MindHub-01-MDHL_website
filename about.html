@@ -22,6 +22,7 @@
 	<nav id="mainNav" class="main">
 		<span class="nav-link"><a href="index.html">HOME</a></span>
 		<span class="nav-link no-link">ABOUT MDHL</span>
+		<span class="nav-link"><a href="game_info.html">GAME INFO</a></span>
 		<span class="nav-link"><a href="rules.html">RULES &amp; POLICIES</a></span>
 		<span class="nav-link"><a href="contact.html">CONTACT</a></span>
 	</nav>
@@ -32,20 +33,20 @@
 	</aside>
 	<main class="bg-about-us">
 		<section class="general-information">
-			<h3 class="section-headline">MUCH MORE THAN HOCKEY!</h3>
+			<h3 class="section-headline center">MUCH MORE THAN HOCKEY!</h3>
 			<article class="section-info">
-				<h4>Mision</h4>
+				<h4 class="center">Mision</h4>
 				<p class="info-mision">To support young athletes living Chicago's northside neighborhood, who have an interest in learning
 					and
 					playing soccer, with opportunities to learn and practice skills related to the game of hockey,
 					specifically those skills around team cooperation and good sportsmanship.</p>
 			
-				<h4>Vision</h4>
+				<h4 class="center">Vision</h4>
 				<p class="info-vision">The Mighty Ducks Hockey League aspires to develop strong, well-rounded and mindful athletes through
 					the
 					building of character, self-discipline, and leadership.</p>
 			
-				<h4>General Information</h4>
+				<h4 class="center">General Information</h4>
 				<p class="info-general-information">The Mighty Ducks Soccer League was established in 1996 to provide athletes residing Chicago's
 					northside
 					neighborhoods an environment in which to learn and play hockey. To be a member of MDHL, you must be
@@ -58,63 +59,11 @@
 			</figure>
 		</section>
 	</main>
-	<footer>
-		<nav class="styles-selector">
-			<span class="nav-styles-selector"><a href="javascript:void(0);" onclick="selectStylesheet(0);">Style 1</a></span>•
-			<span class="nav-styles-selector"><a href="javascript:void(0);" onclick="selectStylesheet(1);">Style 2</a></span>•
-			<span class="nav-styles-selector"><a href="javascript:void(0);" onclick="selectStylesheet(2);">Style 3</a></span>
-		</nav>
+	<footer class="center">
 		<p>&copy; 2023 - MDHL All rights reserved.</p>
 	</footer>
 	
 	<script>
-
-		function updateNavLinks(themeID) {
-			let navLinks = document.querySelectorAll("nav.main a")
-
-			for (i = 0; i < navLinks.length; i++) {
-				let url = navLinks[i].href;
-
-				navLinks[i].href = url.substring(0, url.length - 1) + String(themeID);
-			}
-		}
-
-
-		function selectStylesheet(themeID) {
-			var nav = document.querySelectorAll(".nav-styles-selector")
-			var theme = document.getElementById("theme");
-
-			for (i = 0; i < nav.length; i++) {
-				nav[i].classList.remove('nav-item-selected');
-			}
-
-			updateNavLinks(themeID);
-
-			nav[themeID].classList.add('nav-item-selected');
-			switch (themeID) {
-				case 0:
-					theme.setAttribute("href", "./styles/style.css");
-					theme.setAttribute("href", "./styles/style.css");
-					break;
-				case 1:
-					theme.setAttribute("href", "./styles/style_2.css");
-					theme.setAttribute("href", "./styles/style_2.css");
-					break;
-				case 2:
-					theme.setAttribute("href", "./styles/style_3.css");
-					theme.setAttribute("href", "./styles/style_3.css");
-					break;
-			}
-
-			if (themeID == 2) {
-				websiteLogo = document.getElementById("website-logo");
-				websiteMainNav = document.getElementById("mainNav");
-				window.addEventListener("scroll", myScrollFunc);
-			}
-
-			return false;
-		}
-
 		/* Logo and Nav objects Visual control */
 		var isVisible = false;
 
@@ -137,9 +86,10 @@
 			}
 		}
 
-		selectStylesheet(themeID);
-
+		websiteLogo = document.getElementById("website-logo");
+		websiteMainNav = document.getElementById("mainNav");
+		window.addEventListener("scroll", myScrollFunc);
 	</script>
-</body>
-
-</html>
+	</body>
+	
+	</html>

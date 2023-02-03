@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Information</title>
+
+	<link id="theme" rel="stylesheet" href="./styles/style.css" type="text/css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+	<header class="bg-header-game-info">
+		<h1>MIGHTY DUCKS HOCKEY LEAGUE</h1>
+		<div class="baseline-header">
+			<h2>GAME INFO</h2>
+		</div>
+	</header>
+	<nav id="mainNav" class="main">
+		<span class="nav-link"><a href="index.html?style=0">HOME</a></span>
+		<span class="nav-link"><a href="about.html?style=0">ABOUT MDHL</a></span>
+		<span class="nav-link no-link">GAME INFO</span>
+		<span class="nav-link"><a href="rules.html">RULES &amp; POLICIES</a></span>
+		<span class="nav-link"><a href="contact.html">CONTACT</a></span>
+	</nav>
+	<aside id="website-logo" class="website-logo">
+		<figure>
+			<img src="./images/logo-mighty-ducks-01.png" alt="Mighty Ducks Hockey League">
+		</figure>
+	</aside>
+	<main class="bg-game-info">
+		<section class="game-info">
+			<h3 class="section-headline center">FALL SCHEDULE</h3>
+			<table class="game-info-table left">
+				<caption>* All games take place on Saturday.</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="center">SEPTEMBER</th>
+						<th scope="col">Teams</th>
+						<th scope="col">Location</th>
+						<th scope="col">Times</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th rowspan="2" class="center">9/01</th>
+						<td>U1 and U4</td>
+						<td>AJ Katzenmaier</td>
+						<td>9:30 a.m.</td>
+					</tr>
+					<tr>
+						<td>U3 and U2</td>
+						<td>Greenbay</td>
+						<td>1:00 p.m.</td>
+					</tr>
+					<tr>
+						<th rowspan="2" class="center">9/08</th>
+						<td>U5 and U6</td>
+						<td>Howard A Yeager</td>
+						<td>9:30 a.m.</td>
+					</tr>
+					<tr>
+						<td>U6 and U1</td>
+						<td>Marjorie P Hart</td>
+						<td>1:00 p.m.</td>
+					</tr>
+					<tr>
+						<th rowspan="2" class="center">9/15</th>
+						<td>U2 and U4</td>
+						<td>North</td>
+						<td>9:30 a.m.</td>
+					</tr>
+					<tr>
+						<td>U3 and U5</td>
+						<td>AJ Katzenmaier</td>
+						<td>1:00 p.m.</td>
+					</tr>
+					<tr>
+						<th rowspan="2" class="center">9/22</th>
+						<td>U1 and U3</td>
+						<td>South</td>
+						<td>9:30 a.m.</td>
+					</tr>
+					<tr>
+						<td>U2 and U6</td>
+						<td>Howard A Yeager</td>
+						<td>1:00 p.m.</td>
+					</tr>
+					<tr>
+						<th class="center">9/29</th>
+						<td>U4 and U5</td>
+						<td>Greenbay</td>
+						<td>9:30 a.m.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<article class="game-info-general-information flex-container flex-dir-col flex-jc-space-between">
+				<p><span class="p-heading">Facility Type: </span>Outdoor</p>
+				<p><span class="p-heading">Additional lnformation: </span> I deemed necessary by MDHL games may be shortened or
+					cancelled due to extreme weather
+					conditions.</p>
+				<p><span class="p-heading">Please direct all questions to:</span> Michael Randall, League Coordinator</p>
+				<div class="flex-container flex-jc-space-between">
+					<p><span class="p-heading">Phone:</span> (630) 690-8132</p>
+					<p><span class="p-heading">Email:</span> michael.randall@cchihockey.org</p>
+				</div>
+			</article>
+
+		</section>
+	</main>
+	<footer class="center">
+		<p>&copy; 2023 - MDHL All rights reserved.</p>
+	</footer>
+
+	<script>
+		/* Logo and Nav objects Visual control */
+		var isVisible = false;
+
+		var myScrollFunc = function () {
+			var y = window.scrollY;
+
+			if (y >= 200 && !isVisible) {
+				isVisible = true;
+				websiteLogo.classList.remove("hide");
+				websiteLogo.classList.add("show");
+				websiteMainNav.classList.remove("hide");
+				websiteMainNav.classList.add("show");
+			}
+			else if (y < 200 && isVisible) {
+				isVisible = false;
+				websiteLogo.classList.remove("show");
+				websiteLogo.classList.add("hide");
+				websiteMainNav.classList.remove("show");
+				websiteMainNav.classList.add("hide");
+			}
+		}
+
+		websiteLogo = document.getElementById("website-logo");
+		websiteMainNav = document.getElementById("mainNav");
+		window.addEventListener("scroll", myScrollFunc);
+	</script>
+</body>
+
+</html>

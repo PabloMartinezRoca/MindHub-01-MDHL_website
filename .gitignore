@@ -29,6 +29,8 @@ creds.js
 *.tsv.gz
 *.xlsx
 
+# Design Files
+*.psd
 
 # Mac/OSX
 .DS_Store
