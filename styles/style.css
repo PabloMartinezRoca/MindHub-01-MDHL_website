@@ -383,6 +383,97 @@ nav.main.hide {
 	}
 }
 
+nav.main span a,
+nav.main span.no-link { 
+	width: 130px;
+  display: inline-block;
+	/* margin-left: -6px; */
+	padding: 0.5em;
+	text-align: center;
+	background-color: #669999;
+	border: #222 1px solid;
+	border-radius: 3px;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+nav.main span:first-child,
+nav.main span:first-child a {
+	border-radius: 15px 0 0 15px;
+}
+
+nav.main span:last-child,
+nav.main span:last-child a {
+	border-radius: 0 15px 15px 0;
+}
+
+nav.main a,
+nav.main a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+nav.main span a:hover { 
+	background-color: #99cccc;
+}
+
+nav.main span.no-link,
+nav.main span.no-link:hover { 
+	background-color: #ffcc33;
+	cursor: default;
+}
+
+/* CSS Animations */
+nav.main.show {
+	/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+	animation: 1s ease-out 1s 1 normal forwards running showMainNav;
+}
+
+nav.main.hide {
+	/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+	animation: 0.5s ease-in 0s 1 normal forwards running hideMainNav;
+}
+
+@keyframes showMainNav {
+  0% {
+		z-index: 3;
+    transform: translatey(-100vh);
+		opacity: 0;
+		position: fixed;
+  }
+	75% {
+		z-index: 3;
+		opacity: 0.25;
+		position: fixed;
+	}
+  100% {
+		z-index: 3;
+    transform: translatey(35px);
+		opacity: 1;
+		position: fixed;
+  }
+}
+
+@keyframes hideMainNav {
+  0% {
+		z-index: 3;
+    
+		position: fixed;
+  }
+  98% {
+    transform: translatey(-50vh);
+		z-index: 3;
+  }
+	99% {
+		z-index: 0;
+    transform: translatey(0);		
+  }
+	100% {
+		z-index: 0;
+		position: absolute;
+	}
+}
+
 /* Main ================================================================= */
 main {
 	width: 100%;
