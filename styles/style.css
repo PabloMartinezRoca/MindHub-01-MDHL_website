@@ -471,11 +471,19 @@ main.bg-upcoming-events {
 		font-style: italic;
 }
 
-.game-info-table tr:nth-child(even) {
+.game-info-table th[scope="col"] {
+	background-color: #6ba498;
+}
+
+.game-info-table th[scope="row"] {
+	background-color: #c4e3db;
+}
+
+.game-info-table tr.even {
 	background-color: #1dbfa7;
 }
 
-.game-info-table tr:nth-child(odd) {
+.game-info-table tr.odd {
 	background-color:#a0d3c8;
 }
 
@@ -485,12 +493,41 @@ main.bg-upcoming-events {
 	padding: 1em 0.4em;
 }
 
-.game-info-table th[scope="col"] {
-	background-color: #6ba498;
+.game-info-table .hotspot-map {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0.5em;
+	font-size: 0.8em;
+	color: blue;
+	text-decoration: underline;
 }
 
-.game-info-table th[scope="row"] {
-	background-color: #c4e3db;
+.game-info-table .hotspot-map:hover ~ .game-info-map {
+	overflow: hidden;
+  width: 100%;
+	height: 400px;
+  transition: width 600ms ease-out, height 600ms ease-out;
+}
+
+.game-info-table .game-info-map {
+	height: 0;
+}
+
+.game-info-table .game-info-map:hover {
+	height: 400px;
+}
+
+.game-info-table .game-info-map:not(:hover) {
+	overflow: hidden;
+  width: 100%;
+	height: 0;
+  transition: width 600ms ease-out, height 400ms ease-out;
+}
+
+.game-info-table tr.map-container td {
+	text-align: center;
+	padding: 0;
+	display: table-cell;
 }
 
 .game-info-general-information {
