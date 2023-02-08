@@ -141,6 +141,10 @@ table * {
 	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
+.not-visible {
+	display: none;
+}
+
 /* Header ================================================================= */
 header { 
   height: 550px;
@@ -551,6 +555,7 @@ main.bg-upcoming-events {
 
 .game-info-table .game-info-map {
 	height: 0;
+	width: 100%;
 }
 
 .game-info-table .game-info-map:hover {
