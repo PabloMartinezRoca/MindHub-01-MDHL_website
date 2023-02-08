@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+
+	<link id="theme" rel="stylesheet" href="./styles/style.css" type="text/css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+	<header class="box-shadow bg-header-registration">
+		<h1>MIGHTY DUCKS HOCKEY LEAGUE</h1>
+		<div class="baseline-header flex flex-wrap">
+			<h2 class="flex flex-align-bottom">WE'D LIKE TO KNOW ABOUT YOU!</h2>
+		</div>
+	</header>
+	<nav id="mainNav" class="main">
+		<span class="nav-link"><a href="index.html">HOME</a></span>
+		<span class="nav-link"><a href="about.html">ABOUT MDHL</a></span>
+		<span class="nav-link"><a href="game_info.html">GAME INFO</a></span>
+		<span class="nav-link"><a href="rules.html">RULES &amp; POLICIES</a></span>
+		<span class="nav-link no-link">REGISTER</span>
+		<span class="nav-link"><a href="contact.html">CONTACT</a></span>
+	</nav>
+	<aside id="website-logo" class="website-logo">
+		<figure>
+			<img src="./images/logo-mighty-ducks-01.png" alt="Mighty Ducks Hockey League">
+		</figure>
+	</aside>
+	<main class="bg-registration-form">
+		<section class="registration-form">
+			<h3 class="section-headline center">REGISTRATION FORM</h3>
+
+			<!-- Registration Form -->
+			<div class="form-container flex-container flex-jc-space-around">
+				<form class="flex-container flex-wrap " action="show_data.html" method="get">
+
+					<div class="flex row">
+						<label class="flex-grow">First Name <input type="text" name="first_name" class="w-200"></label>
+						<label class="flex-grow">Last Name <input type="text" name="last_name" class="w-200"></label>
+					</div>
+					<div class="row">
+						<label>Street Address <input type="text" name="street_address" class="w-400"></label>
+					</div>
+					<div class="flex row">
+						<label class="flex-grow">City <input type="text" name="city" class="w-200"></label>
+						<label class="flex-grow">Zip Code <input type="text" name="zip_code" class="w-100"></label>
+					</div>
+					<div class="flex row">
+						<label class="flex-grow">Birth Date <input type="date" name="birth_date"></label>
+						<label class="flex-grow">Gender <input type="radio" name="gender" value="Female">Female
+							<input type="radio" name="gender" value="Male">Male</label>
+					</div>
+					<div class="row">
+						<fieldset>
+							<legend>Grade</legend>
+							<label><input type="radio" name="grade" value="Pre-School">Pre-School</label>
+							<label><input type="radio" name="grade" value="1st">1st</label>
+							<label><input type="radio" name="grade" value="2nd">2nd</label>
+							<label><input type="radio" name="grade" value="3rd">3rd</label>
+							<label><input type="radio" name="grade" value="4th">4th</label>
+							<label><input type="radio" name="grade" value="5th">5th</label>
+						</fieldset>
+					</div>
+					<p class="row">Which elementary school do you live near?</p>
+					<label>Closest School
+						<select name="closest_school">
+							<option name="closest_school" value="None" selected>None</option>
+							<option name="closest_school" value="AJ Katzenmaier">AJ Katzenmaier</option>
+							<option name="closest_school" value="Greenbay">Greenbay</option>
+							<option name="closest_school" value="Howard A Yeager">Howard A Yeager</option>
+							<option name="closest_school" value="Marjorie P Hart">Marjorie P Hart</option>
+							<option name="closest_school" value="North Elementary">North Elementary</option>
+							<option name="closest_school" value="South Elementary">South Elementary</option>
+						</select>
+					</label>
+					<p class="row">What position(s) do you normally play? (check all that apply)</p>
+					<label><input type="checkbox" name="field_position" value="Forward">Forward</label>
+					<label><input type="checkbox" name="field_position" value="Defense">Defense</label>
+					<label><input type="checkbox" name="field_position" value="Midfield">Midfield</label>
+					<label><input type="checkbox" name="field_position" value="Goalkeeper">Goalkeeper</label>
+					<p class="row">Uniform Size</p>
+					<div>
+						<label><input type="radio" name="uniform_size" value="Youth Small">Youth Small</label>
+						<label><input type="radio" name="uniform_size" value="Youth Medium">Youth Medium</label>
+						<label><input type="radio" name="uniform_size" value="Youth Large">Youth Large</label>
+					</div>
+					<div>
+						<label><input type="radio" name="uniform_size" value="Small">Small</label>
+						<label><input type="radio" name="uniform_size" value="Medium">Medium</label>
+						<label><input type="radio" name="uniform_size" value="Large">Large</label>
+						<label><input type="radio" name="uniform_size" value="Extra-Large">Extra-Large</label>
+					</div>
+
+
+					<p class="row">Permission to Play</p>
+					<p class="row disclaimer">I, the parent or guardian of the minor registrant, agree that the registrant and I
+						will abide by all the
+						rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated
+						with hockey and in consideration for the "League" accepting the registrant for its hockey programs and
+						activities, I hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated
+						personnel and volunteers,including the facilities used for practices and games, against any claim by or on
+						behalf of the registrant as a result of the registrant's participation in the programand/orbeing transported
+						to or from MDHL sponsored activities, which transportation.</p>
+					<p class="row disclaimer">By entering your name below, I hereby agree and authorize the above.</p>
+					<p class="row disclaimer">In addition, by entering below, I also acknowledge that I have read the cancellation
+						policy and agree to its
+						terms.</p>
+					<div class="flex row flex-jc-space-between">
+						<label>Parent/Guardian Name: <input type="text" name="parent_signature"></label>
+						<label>Date: <input type="date" name="date_of_singage"></label>
+					</div>
+					<input type="submit" value="SUBMIT">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="center">
+		<p>&copy; 2023 - MDHL All rights reserved.</p>
+	</footer>
+
+	<script>
+		/* Logo and Nav objects Visual control */
+		var isVisible = false;
+
+		var myScrollFunc = function () {
+			var y = window.scrollY;
+
+			if (y >= 200 && !isVisible) {
+				isVisible = true;
+				websiteLogo.classList.remove("hide");
+				websiteLogo.classList.add("show");
+				websiteMainNav.classList.remove("hide");
+				websiteMainNav.classList.add("show");
+			}
+			else if (y < 200 && isVisible) {
+				isVisible = false;
+				websiteLogo.classList.remove("show");
+				websiteLogo.classList.add("hide");
+				websiteMainNav.classList.remove("show");
+				websiteMainNav.classList.add("hide");
+			}
+		}
+
+		websiteLogo = document.getElementById("website-logo");
+		websiteMainNav = document.getElementById("mainNav");
+		window.addEventListener("scroll", myScrollFunc);
+	</script>
+</body>
+
+</html>
